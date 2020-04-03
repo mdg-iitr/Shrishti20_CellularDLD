@@ -5,17 +5,21 @@ import java.awt.event.KeyEvent;
 public class WorldKeyListener extends KeyAdapter {
     private boolean started;
     private SimulationThread simulation;
+    private Wireworld wireworld;
+    private WorldGrid worldGrid;
 
-    public WorldKeyListener(SimulationThread simulation) {
+    public WorldKeyListener(SimulationThread simulation, Wireworld wireworld, WorldGrid worldGrid) {
         this.simulation = simulation;
+        this.wireworld = wireworld;
+        this.worldGrid = worldGrid;
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if( e.getKeyCode() == KeyEvent.VK_ENTER ) {
+        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             simulation.getGameTickSubject().setChanged();
             simulation.getGameTickSubject().notifyObservers();
-        } else if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+        } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
             if (!started) {
                 started = true;
                 simulation.resumeThread();
@@ -27,28 +31,62 @@ public class WorldKeyListener extends KeyAdapter {
                     e1.printStackTrace();
                 }
             }
-        } else if(e.getKeyCode() == KeyEvent.VK_1) {
-            simulation.setMovesPerSecond(1);
-        } else if(e.getKeyCode() == KeyEvent.VK_2) {
-            simulation.setMovesPerSecond(2);
-        } else if(e.getKeyCode() == KeyEvent.VK_3) {
-            simulation.setMovesPerSecond(3);
-        } else if(e.getKeyCode() == KeyEvent.VK_4) {
-            simulation.setMovesPerSecond(4);
-        } else if(e.getKeyCode() == KeyEvent.VK_5) {
-            simulation.setMovesPerSecond(5);
-        } else if(e.getKeyCode() == KeyEvent.VK_6) {
-            simulation.setMovesPerSecond(6);
-        } else if(e.getKeyCode() == KeyEvent.VK_7) {
-            simulation.setMovesPerSecond(7);
-        } else if(e.getKeyCode() == KeyEvent.VK_8) {
-            simulation.setMovesPerSecond(8);
-        } else if(e.getKeyCode() == KeyEvent.VK_9) {
-            simulation.setMovesPerSecond(9);
-        } else if(e.getKeyCode() == KeyEvent.VK_0) {
-            simulation.setMovesPerSecond(10);
-        } else if(e.getKeyChar() == '?') {
-            JOptionPane.showMessageDialog(null, "<html><u>Hello</u><html>", "About Wireworld ~ by unnikked", JOptionPane.INFORMATION_MESSAGE);
+        } else if (e.getKeyCode() == KeyEvent.VK_0 || e.getKeyCode() == KeyEvent.VK_NUMPAD0) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 35, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_1 || e.getKeyCode() == KeyEvent.VK_NUMPAD1) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 40, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_2 || e.getKeyCode() == KeyEvent.VK_NUMPAD2) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 45, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_3 || e.getKeyCode() == KeyEvent.VK_NUMPAD3) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 50, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_4 || e.getKeyCode() == KeyEvent.VK_NUMPAD4) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 55, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_5 || e.getKeyCode() == KeyEvent.VK_NUMPAD5) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 60, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_6 || e.getKeyCode() == KeyEvent.VK_NUMPAD6) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 65, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_7 || e.getKeyCode() == KeyEvent.VK_NUMPAD7) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 70, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_8 || e.getKeyCode() == KeyEvent.VK_NUMPAD8) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 75, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyCode() == KeyEvent.VK_9 || e.getKeyCode() == KeyEvent.VK_NUMPAD9) {
+            Grid grid = new Grid();
+            grid.setCellState(109, 80, Cell.State.ELECTRON_HEAD);
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
+        } else if (e.getKeyChar() == '?') {
+            JOptionPane.showMessageDialog(null, "<html><u>Hi there!</u><br>Made with ❤ by MDG<html>", "Wireworld Cellular DLD", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            Grid grid = new Grid();
+            wireworld.setGrid(grid);
+            worldGrid.update(grid);
         }
     }
 }

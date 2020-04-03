@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
@@ -7,6 +9,14 @@ public class Grid implements Serializable {
 
     public Grid() {
         this.grid =  new HashMap<Coordinate, Cell>();
+        GridImporter gridImporter = GridImporter.getInstance();
+        try {
+            this.grid = new Grid(gridImporter.gridImport(new File("display.w"))).grid;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public Grid(Grid grid) {
