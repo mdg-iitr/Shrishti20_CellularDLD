@@ -67,7 +67,7 @@ By pressing `space` you can switch between the manual mode and the automatic mod
 
 By pressing any number from `0-9` on your keyboard, you will see the signal flow in the form of electrons and then the number will finally be displayed on the seven segment display.
 
-Number 8 is displayed in the following gif:
+For e.g., Number 8 is displayed in the following gif:
 
 ![](https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/display8.gif)
 
