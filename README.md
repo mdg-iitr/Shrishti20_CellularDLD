@@ -32,8 +32,9 @@ Consider <B>forking</B> the project if you want to make changes to it or simply 
 
 You'll require to add the required configuration in the IDE for the first time you open the project.
 
-After you run the project, you'll see the following window on the screen.<BR>
-[Cellular_DLD](https://drive.google.com/file/d/10LJP2V_Wrqa-_rnyoO2GeosY5P0NpnoU/view?usp=sharing)
+After you run the project, you'll see the following window on the screen.
+
+<img src="https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/SevenSegmentDisplay.png" height="400px" width="400px" align="centre">
 
 As this project demonstrates the seven segment decoder, the configuration is automatically imported as the project runs. If you want an empty cellular world, this can be done as follows.
 
@@ -66,4 +67,8 @@ By pressing `space` you can switch between the manual mode and the automatic mod
 
 By pressing any number from `0-9` on your keyboard, you will see the signal flow in the form of electrons and then the number will finally be displayed on the seven segment display.
 
+![](https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/display8.gif)
+
 By pressing `question mark (?)`, a popup will appear where you can see all the controls of Cellular_DLD.
+
+<img src="https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/help.png" height="400px" width="400px" align="centre">
