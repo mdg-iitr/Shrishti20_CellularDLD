@@ -54,7 +54,7 @@ Else if you want to change the configuration, this can be done in the following 
 
 1. either import the configuration in the empty cellular world using the `import` option in the menu of the cellular world.
 
-2. or in the [Grid.java](https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/src/Grid.java), you can change the path of the file to your configuration.
+2. or in the [Grid.java](https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/src/Grid.java#L14), you can change the path of the file to your configuration.
 
 ## Running Cellular_DLD
 
