@@ -82,7 +82,7 @@ public class WorldKeyListener extends KeyAdapter {
             wireworld.setGrid(grid);
             worldGrid.update(grid);
         } else if (e.getKeyChar() == '?') {
-            JOptionPane.showMessageDialog(null, "<html><u>Hi there!</u><br>Made with ❤ by MDG<html>", "Wireworld Cellular DLD", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "<html><u>Hi there!</u><br>1) Right click to change the state of the grid respectively to Electron head, Electron tail and Conductor cyclically.<br>2) Press enter to manually compute a tick of the current generation.<br>3) Press space to  switch between the manual mode and automatic mode.<br>4) Press any number from 0-9 to see the signal flow in the form of electrons and then finally the number on the seven segment display.<br><B>Made with ❤ by MDG<B><html>", "Wireworld Cellular DLD", JOptionPane.INFORMATION_MESSAGE);
         } else {
             Grid grid = new Grid();
             wireworld.setGrid(grid);
