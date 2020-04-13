@@ -34,7 +34,7 @@ You'll require to add the required configuration in the IDE for the first time y
 
 After you run the project, you'll see the following window on the screen.
 
-<img src="https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/SevenSegmentDisplay.png" height="400px" width="400px" align="centre">
+<img src="https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/SevenSegmentDisplay.png" height="350px" width="400px" align="centre">
 
 As this project demonstrates the seven segment decoder, the configuration is automatically imported as the project runs. If you want an empty cellular world, this can be done as follows.
 
@@ -73,4 +73,4 @@ For e.g., Number 8 is displayed in the following gif:
 
 By pressing `question mark (?)`, a popup will appear where you can see all the controls of Cellular_DLD.
 
-<img src="https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/help.png" height="400px" width="400px" align="centre">
+<img src="https://github.com/mdg-iitr/Shrishti20_CellularDLD/blob/master/assets/help.png" height="350px" width="400px" align="centre">
